@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>
+			JSON Example
+		</title>
+	</head>
+	<body>
+		<p id = "example"> 
+		</p>
+	</body>
+	<script>
+		jString = '[{"Sport":[{"q1":"NBA: Toronto ?","q2":"NHL: Toronto ?"}], "Math":[{"q1":"3 * 14 = ?","q2":"21 + 21 = ?"}]}]';
+		data = JSON.parse(jString);
+        document.getElementById("example").innerHTML = data[0].Sport[0].q1;
+        
+        /* Expand on code and make code good.
+
+// take this code and make it specified for our product */
+	</script>
+
+
+
+</html>
+
