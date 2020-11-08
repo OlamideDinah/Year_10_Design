@@ -10,38 +10,89 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
 </head>
 
-  <nav class="navbar navbar-expand-sm  sticky-top bg-light"> <!-- they chunk un top when screen is small!-->
-    <ul class="navbar-nav"> <!--  Part of creating a navbar <!-->
+  <nav class="navbar navbar-expand-sm sticky-top bg-light "> <!-- they chunk un top when screen is small!-->
+    <ul class="navbar-nav float-right"> <!--  Part of creating a navbar <!-->
       <li class="nav-item">  <!-- one of the navbar boxes<!-->
-        <a class="nav-link bg-light text-success" href="#">Home</a><!-- Where the actual text and redirection site location go. <!-->
+        <a class="nav-link bg-light text-primary" href="#">Home</a><!-- Where the actual text and redirection site location go. <!-->
       </li>
       <li class="nav-item">  <!-- one of the navbar boxees<!-->
-        <a class="nav-link bg-light text-dark" href="about.html">About Us</a>
+        <a class="nav-link bg-light text-primary" href="about.html">Feedback</a>
       </li>
+      <li class="nav-item ">  <!-- one of the navbar boxees<!-->
+        <a class=" bg-primary nav-link text-light " href="about.html">Language</a>
+      </li>
+      <li class="nav-item float-right ">  <!-- one of the navbar boxees<!-->
+        <a class="nav-link float-right bg-light text-primary" href="about.html">USD ^</a>
+      </li>
+      <form class="form-inline pl-2 right">
+        <div class="md-form my-0">
+          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        </div>
+        <button href="#!" class="btn btn-outline-white" type="submit">Search</button>
+      </form>
     </ul>
+  </div>
   </nav> <!-- <!-->
 
-</div>
+
     
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3GQSdrWoDej7qboU5rDh-0Bt63d6wrdfoYg&usqp=CAU" alt="" class="img-responsive"  width="100%" height="100%" > <!-- First pages background image <!-->
+      <img src="https://cdn.pixabay.com/photo/2018/02/23/04/38/laptop-3174729_960_720.jpg" alt="" class="img-responsive"  width="100%" height="100%" > <!-- First pages background image <!-->
         <input class="form-control search w-50 input-mysize"id="listSearch" type="text" placeholder="Please enter a stock ticker i.e.(AAPL)" aria-label="Search"> <!-- search bar !-->
         <div class="title w-25 h-10 text-center" > <!-- the width is 25% of the page the text is centered <!-->
         Product Name
       </div>
+
+        <div class = "container-fluid h-25  d-flex bg-light justify-content-center">
+          <img src ='https://lh3.googleusercontent.com/proxy/CaAGJP7utuDlw2D-j1aSc0CnTwaUa2Rh57Q1wSwS6rwJMRUHMFocepYkNGORJspItGwDAgMQ9ZoHGjuStDjlvqopzFdYIqQuNOJlaLQqjROob8NbvT-p-Q' class = fit> <img src ='https://blog.hubspot.com/hubfs/image8-2.jpg' class = fit> <img src ='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEU6VZ////81Up0yT5xgc61+jbsvTZyXo8hFXaOirM0nSJmlrs7O1OUkRpkfQ5c1UZ1oerKHlcDp6/M9WKHHzeHV2ulxgravt9Td4Ozl6PGDkb7ByN5YbatQZ6j29/q3v9h2hrhMY6aQnMSsAnKHAAAC70lEQVR4nO3caXLiMBRFYdoihhhsQ5jDlPT+F9mdqv7bRrYQ7z7XOQug9BUWHiQzmRARERERERERERERERERqVe0IZQPCtaDHFwo62Yz/VrP3jtbrH0Sy7rYH46/YtpV1oPtX6jCbBel+2npThjq/Taa51AYmrdTH583YdHsP/r5nAnLTa/j05+w+ezv8yRsq/MQoB9hmPeegb6E5eU2DOhFWK4G+rwIw3CgD2G4Dge6ELaboXPQi7CJu4nwK6zvKUAHwvCVBHQgrFMmoQdh4jGqL2wviUB5YRP/uMKnsJ2mAtWF9XLkwjblcs2FsDqMXZh6LpQXhn06UFtYpZ7t5YX1wEczboTF/AlAaWFYP0OovPZU9pmGt9194W79sIq/Jt2uqqrytwbcxJ4NT9e6tR7soEIk8N749E2K7zjgubEe6dAi75yOboGxwrnTQ/RvRZTwIHy6e1SccF5Yj3N4UcJjbT3MhKKEh9J6mAlFCZWvyR4WJXxDqBxChPohRKgfQoT6IUSoH0KE+iFEqB9ChPqNQ1h0vKJcxWwt/aofvelsDFzNOlpECO9dH/DT+8ZUWMYgErNdfXuB8Ga7RPwCofHy2wuE59EfpQvbH9MXCNejF65st2q8QPhtu5Mhv/BmfE2TX/hhvGMqv3BpvBslv/BuvGUqv3A2+nloff+YX3gx3rmYX2j9CCC78Ga9NzO78GS9dTG7cDv679B8c2Z24e/R/9LsRy+8Wm/kzy60nobZhdb3TvmF9u8e5hYaP0p8gfB99PPQ/l2F3MKp+StDuYXWvuxC60eJ+YXm907ZhQJ/NlA+4d9ZOrrbH6WTzbyjmL+D/Oz6BNsl/H8V/y9E7TYpOz7BGveoceyn6QohQv0QItQPIUL9ECLUDyFC/RAi1A8hQv0QItQPIUL9ECLUDyFC/RAi1A8hQv0QItQPIUL9ECLUDyFC/RAi1A8hQv0QItQPIUL9ECLUDyFC/RAi1A8hQv0QItQPIUL9ECLs0R8aFUYEFLSeAgAAAABJRU5ErkJggg==' class = fit>
+        </div>
+        </div>
           
-        <div class="container-fluid h-100 orange">
+        <div class="container-fluid h-75">
+            <div class="row h-100">
+              <div class="col h-100 d-flex justify-content-center text-center">
+                <div class ='stock-widget h-50 w-75 bg-light text-primary'>
+                  <br>
+                  <br>
+                  Stock Widget
+                </div>
+              </div>
+              <div class="col d-flex justify-content-center text-center">
+                <div class ='stock-info h-50 w-75 bg-light text-primary'>
+                  <br>
+                  <br>
+                  Stock Metrics/Data
+              </div>
+            </div>
+ 
+            
+        
+  
+
+          <div class="container-fluid h-75 bg-light">
             <div class="row h-100">
               <div class="col h-100 d-flex justify-content-center text-center">
                 <div class ='stock-widget h-50 w-75'>
-                  Widget containing Information about stock and its performance
+                  Market News
+                  <br>
+                  1.
+                  <br>
+                  2.
+                  <br>
+                  3.
                 </div>
               </div>
               <div class="col d-flex justify-content-center text-center">
                 <div class ='stock-info h-50 w-75'>
-                  Stock Metrics and data regarding stock
+                  Company News
+                  <br>
+                  1.
+                  <br>
+                  2.
+                  <br>
+                  3.
               </div>
             </div>
-            <button type="button" class="btn btn-dark w-25">Click For Related News</button>
+            
           </div>
 
   </body>

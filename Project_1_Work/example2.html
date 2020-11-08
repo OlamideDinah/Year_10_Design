@@ -1,0 +1,60 @@
+<html>
+<head>  <!-- IN this section Im just calliing in everything Im going to need (jquery, bootstrap related files, fonts) <!-->
+    <link rel="stylesheet" href="example.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+<script src = example2.js></script>
+</head>
+
+  <nav class="navbar navbar-expand-sm  sticky-top bg-light"> <!-- they chunk un top when screen is small!-->
+    <ul class="navbar-nav"> <!--  Part of creating a navbar <!-->
+      <li class="nav-item">  <!-- one of the navbar boxes<!-->
+        <a class="nav-link bg-light text-success" href="#">Home</a><!-- Where the actual text and redirection site location go. <!-->
+      </li>
+      <li class="nav-item">  <!-- one of the navbar boxees<!-->
+        <a class="nav-link bg-light text-dark" href="about.html">About Us</a>
+      </li>
+    </ul>
+  </nav> <!-- <!-->
+
+</div>
+    
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS3GQSdrWoDej7qboU5rDh-0Bt63d6wrdfoYg&usqp=CAU" alt="" class="img-responsive"  width="100%" height="100%" > <!-- First pages background image <!-->
+    <input class="form-control search w-50 input-mysize"id="listSearch" type="text" placeholder="Please enter a stock ticker i.e.(AAPL)" aria-label="Search"> <!-- search bar !-->
+    <div class="title w-25 h-10 text-center" > <!-- the width is 25% of the page the text is centered <!-->
+    Product Name
+  </div>
+   
+          
+        <div class="container-fluid h-100 orange">
+            <div class="row h-100">
+              <div class="col h-100 d-flex justify-content-center text-center">
+                <div class ='stock-widget h-50 w-75'>
+                    <br>
+                    
+                  <p id = "targethigh"> </p>
+                  <p id = "targetlow"> </p>
+                  <p id = "targetmean"> </p>
+                </div>
+              </div>
+              <div class="col d-flex justify-content-center text-center">
+                <div class ='stock-info h-50 w-75'>
+                    <p id = "headline"> </p>
+                    <p id = "source"> </p>
+                    <p id = "url"> </p>
+                   
+                    <p class = "text" id = "targethigh"> </p>
+        <p class = "text" id = "targetlow"> </p>
+        <p class = "text" id = "targetmean"> </p>
+              </div>
+            </div>
+            <button type="button" class="btn btn-dark w-25">Click For Related News</button>
+          </div>
+
+  </body>
+</html>
