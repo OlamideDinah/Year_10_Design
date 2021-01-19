@@ -1,0 +1,114 @@
+<html>
+<head>  <!-- IN this section Im just calliing in everything Im going to need (jquery, bootstrap related files, fonts) <!-->
+    <link rel="stylesheet" href="index.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+<script src = index.js></script>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top"> <!-- Navbar -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="feedback.html">Feedback</a>
+      </li>
+    </ul>
+    <form class="d-flex"> <!-- Search bar -->
+      <input class="form-control me-2 input-mysize" type="text" value="" id="search" placeholder="Please enter a stock ticker i.e.(AAPL)" aria-label="Search">
+      <button class="btn btn-outline-success" onclick="stocks();widget()" type="button">Search</button>
+    </form>
+  </div>
+</nav>
+    <div class = "background w-100 h-100 text-center"> <!-- Title -->
+        StockFinder
+      </div>
+    </div>
+        <div class = "container-fluid h-25  d-flex bg-light justify-content-center"> <!-- Banner with popular companies -->
+          <img href = 'google.com' src ='https://media-exp1.licdn.com/dms/image/C560BAQHdAaarsO-eyA/company-logo_200_200/0/1595530301220?e=2159024400&v=beta&t=IJmg_K1W7KCh6082rXN9V7gzlrD9GMwYqk_EjCrDxGw' onclick="window.open(https://www.apple.com/ca/business/)" class = fit> 
+          <img src ='https://blog.hubspot.com/hubfs/image8-2.jpg' onclick="window.open('https://about.google/')" class = fit> 
+          <img src ='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEU6VZ////81Up0yT5xgc61+jbsvTZyXo8hFXaOirM0nSJmlrs7O1OUkRpkfQ5c1UZ1oerKHlcDp6/M9WKHHzeHV2ulxgravt9Td4Ozl6PGDkb7ByN5YbatQZ6j29/q3v9h2hrhMY6aQnMSsAnKHAAAC70lEQVR4nO3caXLiMBRFYdoihhhsQ5jDlPT+F9mdqv7bRrYQ7z7XOQug9BUWHiQzmRARERERERERERERERERqVe0IZQPCtaDHFwo62Yz/VrP3jtbrH0Sy7rYH46/YtpV1oPtX6jCbBel+2npThjq/Taa51AYmrdTH583YdHsP/r5nAnLTa/j05+w+ezv8yRsq/MQoB9hmPeegb6E5eU2DOhFWK4G+rwIw3CgD2G4Dge6ELaboXPQi7CJu4nwK6zvKUAHwvCVBHQgrFMmoQdh4jGqL2wviUB5YRP/uMKnsJ2mAtWF9XLkwjblcs2FsDqMXZh6LpQXhn06UFtYpZ7t5YX1wEczboTF/AlAaWFYP0OovPZU9pmGt9194W79sIq/Jt2uqqrytwbcxJ4NT9e6tR7soEIk8N749E2K7zjgubEe6dAi75yOboGxwrnTQ/RvRZTwIHy6e1SccF5Yj3N4UcJjbT3MhKKEh9J6mAlFCZWvyR4WJXxDqBxChPohRKgfQoT6IUSoH0KE+iFEqB9ChPqNQ1h0vKJcxWwt/aofvelsDFzNOlpECO9dH/DT+8ZUWMYgErNdfXuB8Ga7RPwCofHy2wuE59EfpQvbH9MXCNejF65st2q8QPhtu5Mhv/BmfE2TX/hhvGMqv3BpvBslv/BuvGUqv3A2+nloff+YX3gx3rmYX2j9CCC78Ga9NzO78GS9dTG7cDv679B8c2Z24e/R/9LsRy+8Wm/kzy60nobZhdb3TvmF9u8e5hYaP0p8gfB99PPQ/l2F3MKp+StDuYXWvuxC60eJ+YXm907ZhQJ/NlA+4d9ZOrrbH6WTzbyjmL+D/Oz6BNsl/H8V/y9E7TYpOz7BGveoceyn6QohQv0QItQPIUL9ECLUDyFC/RAi1A8hQv0QItQPIUL9ECLUDyFC/RAi1A8hQv0QItQPIUL9ECLUDyFC/RAi1A8hQv0QItQPIUL9ECLUDyFC/RAi1A8hQv0QItQPIUL9ECLs0R8aFUYEFLSeAgAAAABJRU5ErkJggg==' onclick="window.open(https://about.fb.com/company-info/)" class = fit>
+        </div>
+        <div class="container-fluid h-75">
+            <div class="row h-100">
+              <div class="col h-100 d-flex justify-content-center text-center">
+                <div class ='stock-widget h-50 w-75 bg-light text-primary'>
+                  <!-- TradingView Widget BEGIN -->
+                  <div class="tradingview-widget-container">
+                    <div id="tradingview_78dac"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text"></span></a> <p class = newstext> Stock Widget - TradingView </p></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                    function widget() {
+                    var stock = document.getElementById('search').value;
+                    new TradingView.widget(
+                    {
+                    "autosize": true, // auto adjusts height and width to fit container
+                    "symbol": "NASDAQ:" + stock,
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "light",
+                    "style": "3",
+                    "locale": "en",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "allow_symbol_change": true,
+                    "container_id": "tradingview_78dac"
+                  });      
+                }
+                    </script>
+                  </div>
+                  <!-- TradingView Widget END -->
+                </div>
+              </div>
+              <div class="col d-flex justify-content-center text-center">
+                <div class ='stock-info h-50 w-75 bg-light'>
+                  <p class = "text-primary newstext">Stock Metrics/Data <p> <!-- Stock Metrics Box -->
+                  <p id = "targethigh" class = "newstext"> </p>
+                  <p id = "targetlow" class = "newstext"> </p>
+                  <p id = "targetmean" class = "newstext"> </p>
+              </div>
+            </div>
+          <div class="container-fluid h-75 bg-light">
+            <div class="row h-100">
+              <div class="col h-100 d-flex justify-content-center text-center newstext">
+                <div class ='stock-widget h-50 w-75 newstext'>
+                  <p class = "newstext">Market News </p> <!-- Market News Box -->
+                  <p id = "marketheadline" class = "newstext"> </p>
+                    <p id = "marketsource" class = "newstext"> </p>
+                    <p id = "marketurl" class = "newstext"> </p>
+                    <p id = "marketheadline2" class = "newstext"> </p>
+                    <p id = "marketsource2" class = "newstext"> </p>
+                    <p id = "marketurl2" class = "newstext"> </p>
+                    <p id = "marketheadline3" class = "newstext"> </p>
+                    <p id = "marketsource3" class = "newstext"> </p>
+                    <p id = "marketurl3" class = "newstext"> </p>           
+                </div>
+              </div>
+              <div class="col d-flex justify-content-center text-center">
+                <div class ='stock-info h-50 w-75'>
+                  <p class = "newstext">Company News</p> <!-- Company News Box -->
+                  <p id = "headline" class = "newstext"> </p>
+                    <p id = "source" class = "newstext"> </p>
+                    <p id = "url" class = "newstext"> </p>
+                    <p id = "headline2" class = "newstext"> </p>
+                    <p id = "source2" class = "newstext"> </p>
+                    <p id = "url2" class = "newstext"> </p>
+                    <p id = "headline3" class = "newstext"> </p>
+                    <p id = "source3" class = "newstext"> </p>
+                    <p id = "url3" class = "newstext"> </p>
+              </div>
+            </div> 
+          </div>
+    </body>
+</html>

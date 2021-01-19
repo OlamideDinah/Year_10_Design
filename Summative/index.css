@@ -1,0 +1,57 @@
+.active-cyan-2 input.form-control[type=text]:focus:not([readonly]) { /* This is the for my searchbar*/
+  border-bottom: 1px solid #4dd0e1;
+  box-shadow: 0 1px 0 0 #4dd0e1;
+}
+
+.img-responsive { /* This class is for background images insuring they don't repeat and fully cover the page */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* FIX OPACITY*/
+.navbar{/*  Specifying the font in the navbar*/
+  font-family: 'Open Sans', sans-serif;
+}
+
+.half{   /* Anything with class half has a height of 40% */
+ height:40%;
+}
+
+.background{
+  background-image: url("https://cdn.pixabay.com/photo/2018/02/23/04/38/laptop-3174729_960_720.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size:4vw;
+}
+
+.input-mysize {
+  width: 30rem!important
+}
+
+.newstext { /* Responsive sizing for text in all 4 boxes */
+  font-size:1.15vw;
+}
+
+ .stock-info, .stock-widget { /* For the stock widget */
+  font-size:1rem;
+  background-color:white;
+  position:relative;
+  top:25%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.big {
+  font-size:3rem;
+}
+
+.fit { /* For Popular Logos Section */
+  max-width:13rem;
+  padding:1rem;
+  opacity:0.7;
+}
+
+.fit:hover {
+  opacity:1;
+}
