@@ -57,7 +57,8 @@ Promise.all([
     console.log(error);``
     alert(); // modular
    });
+   function alert() { // modular
+   window.alert("Invalid Stock Symbol"); // Displays a pop-up to user
+   }
  }
-    function alert() { // modular
-      window.alert("Invalid Stock Symbol"); // Displays a pop-up to user
-    }
+    
