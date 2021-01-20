@@ -20,7 +20,7 @@ Promise.all([
 
     var news = data[1] // so this variable is being set to the data returned from my second fetch
     var marketnews = data[3] // fourth fetch
-  // generating random numbers to be used for the market news section
+    // generating random numbers to be used for the market news section
     var arr = [];
     while(arr.length < 3){
     var r = Math.floor(Math.random() * 100) + 1;
@@ -28,7 +28,7 @@ Promise.all([
     var int1 = arr[0]
     var int2 = arr[1]
     var int3 = arr[2]
-  }  // Hyperlink for first marketnews
+  } // Hyperlink for first marketnews
     var marketurl = document.getElementById('marketurl');
     marketurl.innerHTML = '<a href=' + JSON.stringify(marketnews[int1].url) + '>' + marketnews[int1].headline + '</a>'; 
     // Hyperlink for second marketnews
@@ -55,6 +55,9 @@ Promise.all([
 }).catch(error => {
 	// if there's an error with the input, log it
     console.log(error);``
-    window.alert("Invalid Stock Symbol"); // Displays a pop-up to user
+    alert(); // modular
    });
  }
+    function alert() { // modular
+      window.alert("Invalid Stock Symbol"); // Displays a pop-up to user
+    }
